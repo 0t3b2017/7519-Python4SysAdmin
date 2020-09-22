@@ -1,6 +1,6 @@
 from flask import Flask, Response, request
 import json
-import desafio
+from aula01 import desafio
 
 app = Flask(__name__)
 

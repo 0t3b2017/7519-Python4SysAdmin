@@ -10,17 +10,15 @@
          - utilizando a lógica do rot13, decodifique a mensagem que está no campo 'data' do json recebido 
 """
 
-import requests
+#import requests
 
-url = "https://python521.herokuapp.com/desafio"
+#url = "https://python521.herokuapp.com/desafio"
 
-response = requests.get(url)
+#response = requests.get(url)
+
+#char = response.json()['data']
 
 rot13 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-print(response.json())
-
-char = response.json()['data']
 
 def rot13_decrypt(char):
     new_char = ''
@@ -47,10 +45,3 @@ def rot13_encrypt(char):
         new_char += rot13[v + 13]
     
     return(new_char)
-
-print(rot13_decrypt(char))
-
-print()
-
-#print(rot13_encrypt(rot13_decrypt(char)))
-print(rot13_encrypt('Quero mais ferias hahaha'))
